@@ -1,0 +1,284 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-width: 1300px;
+  --container-offset: 15px;
+  --container-fluid-offset: 100px;
+
+  --font-family: "Gilroy", "Arial", sans-serif;
+  --font-size: 18px;
+
+  --line-height: 22px;
+
+  --blue: #404d61;
+  --orange: #ff6501;
+  --grey: #b4b2b2;
+
+  --rounded-xs: 4px;
+  --rounded-sm: 8px;
+  --rounded-md: 12px;
+  --rounded-lg: 16px;
+  --rounded-xl: 20px;
+
+  --section-offset: 96px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--blue);
+  line-height: var(--line-height);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: 0 var(--container-offset);
+  margin: 0 auto;
+}
+
+.container.container--fluid {
+  max-width: none;
+  margin: 0 var(--container-fluid-offset);
+}
+
+/* Helpers */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.none {
+  display: none !important;
+}
+
+.rounded-xs {
+  border-radius: var(--rounded-xs);
+}
+
+.rounded-sm {
+  border-radius: var(--rounded-sm);
+}
+
+.rounded-md {
+  border-radius: var(--rounded-md);
+}
+
+.rounded-lg {
+  border-radius: var(--rounded-lg);
+}
+
+.rounded-xl {
+  border-radius: var(--rounded-xl);
+}
+
+/* Section */
+
+.section {
+  margin-bottom: var(--section-offset);
+}
+
+.section .section-header .section-header__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+/* Cards */
+
+.cards .card {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(87, 87, 87, 0.04);
+}
+
+.cards .card .card__image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards .card .card__price {
+  margin-top: 16px;
+  margin-bottom: 2px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.cards .card .card__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+
+.cards .card .card__location {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--grey);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+/* Header */
+
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 0 70px;
+}
+
+.header .menu li a {
+  color: var(--blue);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+/* Hero */
+
+:is(.hero) .container.container--fluid {
+  background: radial-gradient(
+    33.7% 137.36% at 77.5% 68.03%,
+    #e0ebed 0%,
+    #c3e7ee 100%
+  );
+}
+
+.hero .hero__wrapper {
+  justify-content: space-between;
+}
+
+.hero .hero__title {
+  line-height: 105%;
+  font-weight: 700;
+  font-size: 85px;
+  margin-bottom: 32px;
+}
+
+.hero .hero__text {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.hero .hero-content {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .hero-image img {
+  height: 100%;
+  min-height: 790px;
+  max-height: 790px;
+}
+
+/* Recently */
+
+.recently .section-header {
+  margin-bottom: 32px;
+}
+
+.recently .cards {
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 16px;
+}
+
+.recently .section-footer a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Footer */
+
+.footer {
+  margin-bottom: calc(var(--section-offset) / 3);
+}
+
+:is(.footer) .container.container--fluid {
+  background-color: var(--blue);
+}
+
+.footer .nav {
+  padding: 36px 0;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  text-transform: lowercase;
+}
+
+.footer .footer__item {
+  font-weight: 700;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer .nav .list {
+  gap: 16px;
+}
