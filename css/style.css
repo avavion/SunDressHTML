@@ -282,3 +282,10 @@ a {
 .footer .nav .list {
   gap: 16px;
 }
+
+/* Steps */
+
+.steps .container.container--fluid {
+  padding: 96px 0;
+  background: rgba(255, 101, 1, 0.1);
+}
